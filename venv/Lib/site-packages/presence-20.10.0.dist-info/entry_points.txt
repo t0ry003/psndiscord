@@ -1,0 +1,3 @@
+[console_scripts]
+presence = presence.__main__:main
+
