@@ -3,10 +3,14 @@
 from psnawp_api import psnawp
 from pypresence import Presence
 import time
-from config import (
-    npsso,
-    PSNID
-)
+import configparser
+
+# get npsso, PSNID from psnconfig.ini (can be created with "config-creator.exe")
+
+config = configparser.ConfigParser()
+config.read('psnconfig.ini')
+npsso = config['main']['npsso']
+PSNID = config['main']['PSNID']
 
 start_time = int(time.time())
 oldpresence = ""
